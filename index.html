@@ -1,0 +1,48 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recycle Hub - Login</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-en], [data-fr], [data-ar]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 data-en="Recycle Hub" data-fr="Centre de Recyclage" data-ar="مركز إعادة التدوير">Recycle Hub</h1>
+        <nav>
+            <a href="index.html" data-en="Login" data-fr="Connexion" data-ar="تسجيل الدخول">Login</a>
+            <a href="recycle.html" data-en="Recycle Info" data-fr="Infos Recyclage"
+                data-ar="معلومات إعادة التدوير">Recycle Info</a>
+            <a href="team.html" data-en="Create Team" data-fr="Créer une Équipe" data-ar="إنشاء فريق">Create Team</a>
+        </nav>
+        <div class="lang-switch">
+            <button onclick="changeLanguage('en')">EN</button>
+            <button onclick="changeLanguage('fr')">FR</button>
+            <button onclick="changeLanguage('ar')">AR</button>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2 data-en="Welcome Back!" data-fr="Bon retour!" data-ar="مرحبًا بعودتك!">Welcome Back!</h2>
+            <p data-en="Please login to access your dashboard and connect with your recycling team."
+                data-fr="Veuillez vous connecter pour accéder à votre tableau de bord et rejoindre votre équipe de recyclage."
+                data-ar="يرجى تسجيل الدخول للوصول إلى لوحة التحكم والانضمام إلى فريقك لإعادة التدوير.">Please login...
+            </p>
+            <form action="login.php" method="POST" class="form">
+                <input type="email" name="email" placeholder="Email Address" required />
+                <input type="password" name="password" placeholder="Password" required />
+                <button type="submit" data-en="Login" data-fr="Connexion" data-ar="تسجيل الدخول">Login</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

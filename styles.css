@@ -1,0 +1,167 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to right, #e3f2fd, #f1f8e9);
+  color: #333;
+  padding: 20px;
+}
+
+header {
+  background: #2e7d32;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+nav {
+  margin: 10px 0;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #a5d6a7;
+}
+
+.lang-switch {
+  margin-top: 10px;
+}
+
+.lang-switch button {
+  padding: 6px 12px;
+  margin: 0 5px;
+  border: none;
+  border-radius: 4px;
+  background-color: #81c784;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.lang-switch button:hover {
+  background-color: #66bb6a;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2, h3 {
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+p, li {
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li::before {
+  content: '♻️ ';
+  margin-right: 6px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  border: 2px solid #c8e6c9;
+  border-radius: 6px;
+  font-size: 1em;
+  background-color: #f9fbe7;
+  transition: border-color 0.3s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #66bb6a;
+  outline: none;
+}
+
+.form button {
+  padding: 10px;
+  background-color: #43a047;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #388e3c;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .lang-switch button {
+    margin: 5px 2px;
+  }
+}
+
+html[lang="ar"] body,
+html[lang="ar"] header,
+html[lang="ar"] nav,
+html[lang="ar"] main {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="ar"] nav a {
+  margin: 0 5px;
+}

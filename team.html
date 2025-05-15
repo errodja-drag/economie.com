@@ -1,0 +1,59 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Recycling Team</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-en], [data-fr], [data-ar]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 data-en="Recycle Hub" data-fr="Centre de Recyclage" data-ar="مركز إعادة التدوير">Recycle Hub</h1>
+        <nav>
+            <a href="index.html" data-en="Login" data-fr="Connexion" data-ar="تسجيل الدخول">Login</a>
+            <a href="recycle.html" data-en="Recycle Info" data-fr="Infos Recyclage"
+                data-ar="معلومات إعادة التدوير">Recycle Info</a>
+            <a href="team.html" data-en="Create Team" data-fr="Créer une Équipe" data-ar="إنشاء فريق">Create Team</a>
+        </nav>
+        <div class="lang-switch">
+            <button onclick="changeLanguage('en')">EN</button>
+            <button onclick="changeLanguage('fr')">FR</button>
+            <button onclick="changeLanguage('ar')">AR</button>
+        </div>
+    </header>
+    <main>
+        <section class="form-section">
+            <h2 data-en="Form Your Recycling Team" data-fr="Formez votre équipe de recyclage"
+                data-ar="كوِّن فريق إعادة التدوير الخاص بك">Form Your Recycling Team</h2>
+            <p data-en="Build a group of eco-conscious individuals to participate in local recycling drives and community cleanups."
+                data-fr="Constituez un groupe de personnes éco-responsables pour participer à des campagnes locales de recyclage et de nettoyage communautaire."
+                data-ar="كوّن مجموعة من الأفراد الواعين بيئيًا للمشاركة في حملات إعادة التدوير والتنظيف المجتمعي.">
+                Build a group...
+            </p>
+            <form action="create_team.php" method="POST" class="form">
+                <label for="team_name" data-en="Team Name:" data-fr="Nom de l'équipe :" data-ar="اسم الفريق:">Team
+                    Name:</label>
+                <input type="text" name="team_name" id="team_name" placeholder="Enter your team name" required />
+
+                <label for="members" data-en="Team Members (comma-separated):"
+                    data-fr="Membres de l'équipe (séparés par des virgules) :"
+                    data-ar="أعضاء الفريق (مفصولين بفواصل):">Team Members:</label>
+                <textarea name="members" id="members" placeholder="E.g., Alice, Bob, Charlie" rows="4"
+                    required></textarea>
+
+                <button type="submit" data-en="Create Team" data-fr="Créer une équipe" data-ar="إنشاء الفريق">Create
+                    Team</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recycle Info</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-en], [data-fr], [data-ar]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${lang}`);
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1 data-en="Recycle Hub" data-fr="Centre de Recyclage" data-ar="مركز إعادة التدوير">Recycle Hub</h1>
+        <nav>
+            <a href="index.html" data-en="Login" data-fr="Connexion" data-ar="تسجيل الدخول">Login</a>
+            <a href="recycle.html" data-en="Recycle Info" data-fr="Infos Recyclage"
+                data-ar="معلومات إعادة التدوير">Recycle Info</a>
+            <a href="team.html" data-en="Create Team" data-fr="Créer une Équipe" data-ar="إنشاء فريق">Create Team</a>
+        </nav>
+        <div class="lang-switch">
+            <button onclick="changeLanguage('en')">EN</button>
+            <button onclick="changeLanguage('fr')">FR</button>
+            <button onclick="changeLanguage('ar')">AR</button>
+        </div>
+    </header>
+    <main>
+        <section class="info-section">
+            <h2 data-en="Why Recycle?" data-fr="Pourquoi recycler ?" data-ar="لماذا نعيد التدوير؟">Why Recycle?</h2>
+            <p data-en="Recycling is essential for reducing waste, conserving natural resources, and protecting the environment. By recycling, we help reduce pollution and support a sustainable future."
+                data-fr="Le recyclage est essentiel pour réduire les déchets, préserver les ressources naturelles et protéger l'environnement. En recyclant, nous contribuons à réduire la pollution et à soutenir un avenir durable."
+                data-ar="إعادة التدوير ضرورية لتقليل النفايات والحفاظ على الموارد الطبيعية وحماية البيئة. من خلال إعادة التدوير، نساعد في تقليل التلوث ودعم مستقبل مستدام.">
+                Recycling is essential for reducing waste...
+            </p>
+
+            <h3 data-en="Best Recycling Practices:" data-fr="Meilleures pratiques de recyclage :"
+                data-ar="أفضل ممارسات إعادة التدوير:">Best Recycling Practices:</h3>
+            <ul>
+                <li data-en="✔️ Separate waste by type: paper, plastic, glass, and metal."
+                    data-fr="✔️ Séparez les déchets par type : papier, plastique, verre et métal."
+                    data-ar="✔️ افصل النفايات حسب النوع: الورق، البلاستيك، الزجاج والمعادن.">✔️ Separate waste by
+                    type...</li>
+                <li data-en="✔️ Rinse containers to remove food residue before recycling."
+                    data-fr="✔️ Rincez les contenants pour enlever les résidus alimentaires avant de recycler."
+                    data-ar="✔️ اشطف الحاويات لإزالة بقايا الطعام قبل إعادة التدوير.">✔️ Rinse containers...</li>
+                <li data-en="✔️ Avoid recycling contaminated or greasy materials."
+                    data-fr="✔️ Évitez de recycler les matériaux contaminés ou gras."
+                    data-ar="✔️ تجنب إعادة تدوير المواد الملوثة أو الدهنية.">✔️ Avoid recycling...</li>
+                <li data-en="✔️ Reuse containers and bags when possible."
+                    data-fr="✔️ Réutilisez les contenants et les sacs lorsque c'est possible."
+                    data-ar="✔️ أعد استخدام الحاويات والأكياس عندما يكون ذلك ممكنًا.">✔️ Reuse containers...</li>
+                <li data-en="✔️ Educate your peers and promote local recycling initiatives."
+                    data-fr="✔️ Éduquez votre entourage et encouragez les initiatives locales de recyclage."
+                    data-ar="✔️ قم بتوعية من حولك وادعم المبادرات المحلية لإعادة التدوير.">✔️ Educate your peers...</li>
+            </ul>
+
+            <h3 data-en="Fun Fact:" data-fr="Fait amusant :" data-ar="معلومة ممتعة:">Fun Fact:</h3>
+            <p data-en="Recycling one aluminum can saves enough energy to power a TV for three hours!"
+                data-fr="Recycler une canette en aluminium permet d'économiser assez d'énergie pour alimenter une télévision pendant trois heures !"
+                data-ar="إعادة تدوير علبة ألمنيوم واحدة توفر طاقة كافية لتشغيل تلفاز لمدة ثلاث ساعات!">
+                Recycling one aluminum can...
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
